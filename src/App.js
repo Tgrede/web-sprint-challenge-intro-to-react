@@ -2,9 +2,11 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import './App.css';
 import CharacterList from './components/CharacterList'
+import styled from 'styled-components'
 
 export default function App() {
   const [people, setPeople] = useState([])
+
   
 
   useEffect(() => {
@@ -19,12 +21,19 @@ export default function App() {
   }, [])
 
   return (
-    <div className="App">
+    <StyledApp className="App">
       <h1 className="Header">Characters</h1>
       <CharacterList people={people} />
-    </div>
+    </StyledApp>
   );
 }
+
+const StyledApp = styled.div`
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background-color: rgba(0,0,0,0.5);
+`
 
 
 
