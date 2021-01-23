@@ -1,30 +1,4 @@
-// Write your Character component here
-// import React from 'react'
-// import styled from 'styled-components'
 
-
-// export default function Character(props){
-//      const {person, action} = props
-
-//      return (
-//           <StyledCharacter>
-//                <StyledName>{person.name}</StyledName> 
-//                <button onClick={() => action(person.url)}>See Details</button>
-//           </StyledCharacter>     
-//      )
-// }
-
-// const StyledCharacter = styled.div`
-//      display:flex;
-//      flex-direction:column;
-//      align-items:flex-start;
-//      color: white;
-//      justify-content:center;
-// `;
-
-// const StyledName = styled.h2`
-//      opacity:1;
-// `
 
 import React, {useState} from 'react'
 import styled from 'styled-components'
@@ -46,7 +20,7 @@ export default function Character(props){
           <StyledCharacter>
                <StyledNameContainer>
                     <h2>{person.name}</h2> 
-                    <button onClick={() => openDetails(person.url)}>See Details</button>
+                    <StyledButton onClick={() => openDetails(person.url)}>See Details</StyledButton>
                </StyledNameContainer>
                {
                     currentPerson && <Details currentPerson={currentPerson} close={closeDetails} />
@@ -70,6 +44,17 @@ const StyledNameContainer = styled.div`
      align-items:flex-start;
      flex-shrink:0;
      padding-right:4%;
+`
+
+const StyledButton = styled.button`
+     box-shadow: 1px 1px grey;
+     padding: 8px 14px;
+     border: 1px solid white;
+     border-radius: 8px;
+
+     &:hover{
+          box-shadow:2px 1px 2px grey;
+     }
 `
 
      

@@ -7,8 +7,6 @@ import styled from 'styled-components'
 export default function App() {
   const [people, setPeople] = useState([])
 
-  
-
   useEffect(() => {
       axios.get(`https://swapi.dev/api/people/`)
       .then((res) => {

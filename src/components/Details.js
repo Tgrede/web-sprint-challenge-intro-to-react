@@ -1,35 +1,4 @@
-// import React, {useState, useEffect} from 'react'
-// import axios from 'axios'
 
-// export default function Details(props){
-//      const {currentPerson, close} = props
-//      const [details, setDetails] = useState(null)
-
-
-//      useEffect(() => {
-//           axios.get(currentPerson)
-//           .then(res => {setDetails(res.data)})
-//           .catch(err => {debugger})
-//      }, [currentPerson])
-
-//      return(
-//           <div>
-//                {
-//                     details && 
-//                     <>
-//                <p>Name: {details.name}</p>
-//                <p>Gender: {details.gender}</p>
-//                <p>Height: {details.height}</p>
-//                <p>Mass: {details.mass}</p>
-//                <p>BirthYear: {details.birth_year}</p>
-//                <p>Eye Color: {details.eye_color}</p>
-//                <p>Skin Color: {details.skin_color}</p>
-//                </>
-//                }
-//                <button onClick={close}> Close</button>
-//           </div>
-//      )
-// }
 
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
@@ -82,12 +51,13 @@ padding:2%;
 
 const StyledButton = styled.button`
      box-shadow: 1px 1px grey;
-     padding: 2% 3%;
+     margin-top:15px;
+     padding: 10px 14px  8px;
      border: 1px solid white;
      border-radius: 8px;
 
      &:hover{
-          box-shadow:1px 1px 2px grey;
+          box-shadow:2px 1px 2px grey;
      }
 `
 
