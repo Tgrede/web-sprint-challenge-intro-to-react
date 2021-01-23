@@ -22,12 +22,11 @@ export default function CharacterList(props){
 const StyledCharacterList = styled.div`
      display:flex;
      flex-direction:column;
-     /* align-items:flex-start; */
      width:60%;
      font-size: 1.2rem;
 
-     @media(max-width: 550px){
-          width:95%;
+     @media(max-width: 750px){
+          width:90%;
      }
      
      

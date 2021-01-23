@@ -36,6 +36,10 @@ const StyledCharacter = styled.div`
      border-radius:10px;
      background-color:rgba(0,0,0,.56);
      padding:1% 3% 4%;
+
+     @media(max-width:750px){
+          flex-direction:column;
+     }
 `;
 
 const StyledNameContainer = styled.div`
@@ -44,6 +48,11 @@ const StyledNameContainer = styled.div`
      align-items:flex-start;
      flex-shrink:0;
      padding-right:4%;
+
+     @media(max-width:750px){
+          padding-bottom:10px;
+          align-items:center;
+     }
 `
 
 const StyledButton = styled.button`
